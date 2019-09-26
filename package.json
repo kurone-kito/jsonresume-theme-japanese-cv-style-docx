@@ -1,0 +1,43 @@
+{
+  "name": "@kurone-kito/jsonresume-to-rirekisho-docx",
+  "version": "0.1.0",
+  "description": "Generate a Word docx file of Japanese-style resume (履歴書) from JSON Resume",
+  "author": "kurone-kito",
+  "license": "MIT",
+  "keywords": [
+    "curriculum vitae",
+    "CV",
+    "documents",
+    "docx",
+    "employment",
+    "Japanese",
+    "JSONResume",
+    "JSON Resume",
+    "Microsoft Word",
+    "msword",
+    "portfolio",
+    "resume",
+    "Themes",
+    "日本語",
+    "履歴書"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kurone-kito/jsonresume-to-rirekisho-docx.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kurone-kito/jsonresume-to-rirekisho-docx/issues"
+  },
+  "homepage": "https://github.com/kurone-kito/jsonresume-to-rirekisho-docx#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">=8.16"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
