@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "skipLibCheck": false,
+    "sourceMap": true,
+    "strict": true,
+    "target": "ES2017"
+  }
+}
