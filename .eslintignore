@@ -1,0 +1,6 @@
+/coverage/**
+/page/**
+/node_modules/**
+*.json
+*.md
+LICENSE
