@@ -1,6 +1,6 @@
 {
   "name": "@kurone-kito/jsonresume-theme-japanese-cv-style-docx",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Generate a Word docx file of Japanese-style resume (職務経歴書) from JSON Resume",
   "author": "kurone-kito",
   "license": "MIT",
@@ -63,9 +63,9 @@
     "@types/lodash.chunk": "^4.2.6",
     "@types/lodash.groupby": "^4.6.6",
     "@types/lodash.sortby": "^4.7.6",
-    "@types/webpack": "^4.39.5",
-    "@typescript-eslint/eslint-plugin": "^2.5.0",
-    "@typescript-eslint/parser": "^2.5.0",
+    "@types/webpack": "^4.39.8",
+    "@typescript-eslint/eslint-plugin": "^2.6.1",
+    "@typescript-eslint/parser": "^2.6.1",
     "coveralls": "^3.0.7",
     "dts-bundle-webpack": "^1.0.2",
     "eslint": "^6.6.0",
@@ -88,7 +88,7 @@
     "tsconfig-paths-jest": "0.0.1",
     "typescript": "^3.6.4",
     "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.9",
+    "webpack-cli": "^3.3.10",
     "xml": "^1.0.1"
   }
 }
