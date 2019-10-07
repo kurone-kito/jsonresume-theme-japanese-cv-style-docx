@@ -1,0 +1,8 @@
+.*
+*.docx
+*.tgz
+build.js
+resume.json
+tsconfig.json
+webpack.config.ts
+src/

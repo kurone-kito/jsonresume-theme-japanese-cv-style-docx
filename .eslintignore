@@ -2,6 +2,7 @@
 /page/**
 /node_modules/**
 /index.js
+*.docx
 *.json
 *.md
 LICENSE
