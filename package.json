@@ -1,7 +1,7 @@
 {
-  "name": "@kurone-kito/jsonresume-to-rirekisho-docx",
+  "name": "@kurone-kito/jsonresume-theme-japanese-cv-style-docx",
   "version": "0.1.0",
-  "description": "Generate a Word docx file of Japanese-style resume (履歴書) from JSON Resume",
+  "description": "Generate a Word docx file of Japanese-style resume (職務経歴書書) from JSON Resume",
   "author": "kurone-kito",
   "license": "MIT",
   "keywords": [
@@ -24,15 +24,16 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kurone-kito/jsonresume-to-rirekisho-docx.git"
+    "url": "git+https://github.com/kurone-kito/jsonresume-theme-japanese-cv-style-docx.git"
   },
   "bugs": {
-    "url": "https://github.com/kurone-kito/jsonresume-to-rirekisho-docx/issues"
+    "url": "https://github.com/kurone-kito/jsonresume-theme-japanese-cv-style-docx/issues"
   },
-  "homepage": "https://github.com/kurone-kito/jsonresume-to-rirekisho-docx#readme",
+  "homepage": "https://github.com/kurone-kito/jsonresume-theme-japanese-cv-style-docx#readme",
   "publishConfig": {
     "access": "public"
   },
+  "main": "index.js",
   "scripts": {
     "prepack": "webpack",
     "start": "webpack --watch",
