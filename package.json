@@ -35,6 +35,7 @@
   },
   "main": "index.js",
   "scripts": {
+    "build:resume": "NODE_ICU_DATA=$(node-full-icu-path) node build.js",
     "prepack": "webpack",
     "start": "webpack --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
