@@ -46,7 +46,7 @@
   },
   "dependencies": {
     "@kurone-kito/jsonresume-types": "^0.1.1",
-    "docx": "^5.0.0-rc6",
+    "docx": "^5.0.0-rc7",
     "inversify": "^5.0.1",
     "lodash.groupby": "^4.6.0",
     "lodash.sortby": "^4.7.0",
