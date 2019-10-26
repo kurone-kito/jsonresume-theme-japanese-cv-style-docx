@@ -1,6 +1,7 @@
 import { Document } from 'docx';
 import 'reflect-metadata';
 import { Basics, Meta } from '../../entities';
+import styles from './styles';
 
 export default (
   basics: Pick<Basics, 'name'> = {},
@@ -10,5 +11,6 @@ export default (
     creator: basics.name,
     revision: meta.version,
     subject: 'Curriculum Vitae',
+    styles,
     title: '職務経歴書'
   });
