@@ -1,6 +1,8 @@
 import webpack from 'webpack';
 import packageJson from './package.json';
 
+const DtsBundleWebpack = require('dts-bundle-webpack');
+
 export default (source: webpack.Configuration): webpack.Configuration => ({
   ...source,
   cache: true,
@@ -29,6 +31,14 @@ export default (source: webpack.Configuration): webpack.Configuration => ({
     library: packageJson.name,
     libraryTarget: 'umd'
   },
+  plugins: [
+    new DtsBundleWebpack({
+      indent: '  ',
+      main: 'src/index.d.ts',
+      name: packageJson.name,
+      out: '../index.d.ts'
+    })
+  ],
   resolve: {
     extensions: ['.js', '.json', '.ts', '.tsx']
   },
