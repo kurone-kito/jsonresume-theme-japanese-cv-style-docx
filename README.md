@@ -2,7 +2,7 @@
 
 [![npm version](https://badge.fury.io/js/%40kurone-kito%2Fjsonresume-theme-japanese-cv-style-docx.svg)](https://badge.fury.io/js/%40kurone-kito%2Fjsonresume-theme-japanese-cv-style-docx)
 
-Generate a Word docx file of Japanese-style resume (履歴書) from JSON Resume
+Generate a Word docx file of Japanese-style resume (職務経歴書) from JSON Resume
 
 ## Usage
 
@@ -22,3 +22,54 @@ render(resume).then(buffer => {
   console.log(`writted: ${filename}`);
 });
 ```
+
+## API
+
+### render()
+
+```TypeScript
+render(resume: EnhancedResume): Promise<Buffer>
+```
+
+#### Params
+
+- resume: A JSON Resume object.
+
+#### Returns
+
+Body of the docx file.
+
+## Types
+
+### EnhancedResume
+
+Enhanced definition of the JSON Resume.
+
+```JSON
+{
+  "projects": [
+    {
+      ...
+      "env": {
+        "os": ["Windows XP", "AIX"],
+        "language": ["PL/I", "COBOL"],
+        "platforms": ["Excel 2000"]
+      }
+    }
+  ],
+  "skills": [
+    {
+      ...
+      "tags": "language"
+    },
+    {
+      ...
+      "tags": ["tools", "foobar"]
+    }
+  ]
+}
+```
+
+## License
+
+MIT
