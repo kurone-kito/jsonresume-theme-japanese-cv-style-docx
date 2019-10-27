@@ -5,6 +5,7 @@ export default (source: webpack.Configuration): webpack.Configuration => ({
   ...source,
   cache: true,
   devtool: false,
+  externals: Object.keys(packageJson.dependencies || {}),
   mode: 'production',
   module: {
     rules: [
