@@ -4,5 +4,5 @@
 build.js
 resume.json
 tsconfig.json
-webpack.config.ts
+webpack.config.*
 src/
