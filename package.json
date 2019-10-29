@@ -1,7 +1,7 @@
 {
   "name": "@kurone-kito/jsonresume-theme-japanese-cv-style-docx",
-  "version": "0.1.0",
-  "description": "Generate a Word docx file of Japanese-style resume (職務経歴書書) from JSON Resume",
+  "version": "0.2.0",
+  "description": "Generate a Word docx file of Japanese-style resume (職務経歴書) from JSON Resume",
   "author": "kurone-kito",
   "license": "MIT",
   "keywords": [
@@ -60,6 +60,7 @@
     "@types/webpack": "^4.39.5",
     "@typescript-eslint/eslint-plugin": "^2.5.0",
     "@typescript-eslint/parser": "^2.5.0",
+    "dts-bundle-webpack": "^1.0.2",
     "eslint": "^6.6.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-config-prettier": "^6.5.0",

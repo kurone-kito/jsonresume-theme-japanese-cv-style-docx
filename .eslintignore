@@ -2,6 +2,7 @@
 /page/**
 /node_modules/**
 /index.js
+*.d.ts
 *.docx
 *.json
 *.md
