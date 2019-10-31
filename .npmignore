@@ -3,6 +3,5 @@
 *.tgz
 build.js
 resume.json
-tsconfig.json
-webpack.config.*
+*config.*s*
 src/
