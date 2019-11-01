@@ -1,6 +1,6 @@
 import { Paragraph, HeadingLevel } from 'docx';
 import 'ts-polyfill/lib/es2019-array';
-import { EnhancedProject } from '../../../entities/enhanced';
+import { EnhancedProject } from '~/entities/enhanced';
 import item from './item';
 
 export default (projects: EnhancedProject[] = []) =>

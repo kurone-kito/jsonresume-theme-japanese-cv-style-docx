@@ -1,6 +1,6 @@
 import { Paragraph, HeadingLevel, AlignmentType } from 'docx';
-import { Meta, Basics } from '../../entities';
-import dateFormatter from '../../entities/dateFormatter';
+import { Meta, Basics } from '~/entities';
+import dateFormatter from '~/entities/dateFormatter';
 
 export interface Arguments {
   basics?: Pick<Basics, 'name'>;

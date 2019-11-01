@@ -5,8 +5,8 @@ import {
   TableCell,
   VerticalAlign
 } from 'docx';
-import { Project } from '../../../../entities';
-import dateFormatter from '../../../../entities/dateFormatter';
+import { Project } from '~/entities';
+import dateFormatter from '~/entities/dateFormatter';
 
 export type Keys = 'endDate' | 'entity' | 'name' | 'startDate';
 
