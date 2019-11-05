@@ -5,8 +5,8 @@ import {
   BorderStyle,
   VerticalAlign
 } from 'docx';
-import { GroupedSkill } from '../../../entities/groupBySkills';
-import singleOrMulti from '../atoms/singleOrMulti';
+import { GroupedSkill } from '~/entities/groupBySkills';
+import singleOrMulti from '~/presenters/docxTransform/atoms/singleOrMulti';
 
 interface CellTextOptions {
   body?: string | string[];

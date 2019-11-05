@@ -1,8 +1,8 @@
 import { inject, injectable } from 'inversify';
 import 'reflect-metadata';
-import { EnhancedResume, OutputResume } from '../entities/enhanced';
-import createActivity from '../entities/createActivity';
-import groupBySkills from '../entities/groupBySkills';
+import { EnhancedResume, OutputResume } from '~/entities/enhanced';
+import createActivity from '~/entities/createActivity';
+import groupBySkills from '~/entities/groupBySkills';
 
 export const TransformResumeUseCaseType = Symbol.for('TransformResumeUseCase');
 

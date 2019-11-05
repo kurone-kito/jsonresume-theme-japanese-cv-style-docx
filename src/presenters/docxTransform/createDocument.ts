@@ -1,6 +1,6 @@
 import { Document } from 'docx';
 import 'reflect-metadata';
-import { Basics, Meta } from '../../entities';
+import { Basics, Meta } from '~/entities';
 import styles from './styles';
 
 export default (

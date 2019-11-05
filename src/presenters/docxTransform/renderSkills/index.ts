@@ -1,6 +1,6 @@
 import { Paragraph, HeadingLevel, Table, WidthType } from 'docx';
 import 'ts-polyfill/lib/es2019-array';
-import { GroupedSkill } from '../../../entities/groupBySkills';
+import { GroupedSkill } from '~/entities/groupBySkills';
 import header from './header';
 import item from './item';
 

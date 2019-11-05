@@ -1,5 +1,5 @@
 import { Paragraph, HeadingLevel } from 'docx';
-import singleOrMulti from '../../atoms/singleOrMulti';
+import singleOrMulti from '~/presenters/docxTransform/atoms/singleOrMulti';
 
 export interface Options {
   body?: string | string[];

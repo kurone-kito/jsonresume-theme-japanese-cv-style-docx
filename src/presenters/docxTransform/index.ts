@@ -1,8 +1,8 @@
 import { Packer } from 'docx';
 import { injectable } from 'inversify';
 import 'reflect-metadata';
-import { OutputResume } from '../../entities/enhanced';
-import { TransformPresenter } from '../../usecases/TransformResume';
+import { OutputResume } from '~/entities/enhanced';
+import { TransformPresenter } from '~/usecases/TransformResume';
 import createDocument from './createDocument';
 import renderActivity from './renderActivity';
 import renderHeading from './renderHeading';
