@@ -46,7 +46,6 @@ export default (project: Pick<Project, Keys> = {}) => [
         shading: { fill: 'seashell' },
         verticalAlign: VerticalAlign.CENTER
       })
-    ],
-    tableHeader: true
+    ]
   })
 ];
