@@ -36,13 +36,13 @@
   },
   "main": "index.js",
   "scripts": {
-    "build:resume": "NODE_ICU_DATA=$(node-full-icu-path) node build.js",
-    "test:coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls",
-    "test:watch": "jest --coverage --watch",
+    "build:resume": "NODE_ICU_DATA=$(node-full-icu-path) node sample/build.js",
+    "lint": "eslint --fix './**/*'",
     "prepack": "webpack",
     "start": "webpack --watch",
     "test": "jest --coverage",
-    "lint": "eslint --fix './**/*'"
+    "test:coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls",
+    "test:watch": "jest --coverage --watch"
   },
   "engines": {
     "node": ">=8.16"
