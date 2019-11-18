@@ -6,6 +6,7 @@ env:
 extends:
   - airbnb-base
   - 'eslint:recommended'
+  - 'plugin:jest/recommended'
   - 'plugin:prettier/recommended'
   - prettier/@typescript-eslint
 globals:
@@ -30,6 +31,7 @@ rules:
     - devDependencies:
         - '*.config.?s'
         - '**/*.spec.?s'
+        - 'sample/*.?s'
   no-console:
     - warn
 settings:

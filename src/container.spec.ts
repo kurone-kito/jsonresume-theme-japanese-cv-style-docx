@@ -6,7 +6,7 @@ import {
   TransformPresenterType
 } from './usecases/TransformResume';
 
-describe('Container test', () => {
+describe('container test', () => {
   it.each<[symbol, NewableFunction]>([
     [TransformResumeUseCaseType, TransformResumeInteractor],
     [TransformPresenterType, DocxPresenter]

@@ -12,13 +12,13 @@ describe('render() method: mock container.get() => { handle: async input => toBu
     { basics: { name: 'bar' } }
   ])('input: %o', input => {
     beforeEach(() => mockHandle.mockClear());
-    it('The method bypasses an argument to the handle inner method.', () => {
+    it('the method bypasses an argument to the handle inner method.', () => {
       render(input);
-      expect(mockHandle).toBeCalledWith(input);
+      expect(mockHandle).toHaveBeenCalledWith(input);
     });
-    it('The handle inner method gets buffered object.', async () => {
+    it('the handle inner method gets buffered object.', async () => {
       const expected = Buffer.from(JSON.stringify(input));
-      expect(expected.equals(await render(input)));
+      expect(expected.equals(await render(input))).toBeTruthy();
     });
   });
 });
