@@ -21,12 +21,10 @@ jobs:
           npm ci
           npm run prepack
           npm test
-      - name: Coveralls GitHub Action
-        uses: coverallsapp/github-action@master
+      - uses: coverallsapp/github-action@master
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Release
-        run: npm run semantic-release
+      - uses: codfish/semantic-release-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
