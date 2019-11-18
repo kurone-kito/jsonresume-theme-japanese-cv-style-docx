@@ -22,7 +22,7 @@ describe('length test', () => {
         volunteer: Array(volunteer).fill({})
       };
       const expected = publications + volunteer;
-      it(`Got array length is ${expected}`, () =>
+      it(`got array length is ${expected}`, () =>
         expect(createActivity(arg)).toHaveLength(expected));
     }
   );
@@ -55,7 +55,7 @@ describe.each<
         [target]: [{ [nameKey]: name, [dateKey]: date, summary }]
       };
       const expected: Activity[] = [{ date, name, summary }];
-      it(`Got: ${JSON5.stringify(expected)}`, () =>
+      it(`got: ${JSON5.stringify(expected)}`, () =>
         expect(createActivity(arg)).toStrictEqual(expected));
     }
   );
@@ -111,7 +111,7 @@ describe('combine keys test', () => {
         name,
         summary
       }));
-      it(`Got: ${JSON5.stringify(expected)}`, () =>
+      it(`got: ${JSON5.stringify(expected)}`, () =>
         expect(createActivity(arg)).toStrictEqual(expected));
     }
   );
