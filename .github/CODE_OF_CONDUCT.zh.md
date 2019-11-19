@@ -1,6 +1,6 @@
-Language: [🇬🇧](./CODE_OF_CONDUCT.md) | [🇯🇵](./CODE_OF_CONDUCT.ja.md) | [🇨🇳](./CODE_OF_CONDUCT.zh.md)
-
 # 参与者公约
+
+Language: [🇬🇧](./CODE_OF_CONDUCT.md) | [🇯🇵](./CODE_OF_CONDUCT.ja.md) | [🇨🇳](./CODE_OF_CONDUCT.zh.md)
 
 ## 我们的保证
 
@@ -49,6 +49,6 @@ Language: [🇬🇧](./CODE_OF_CONDUCT.md) | [🇯🇵](./CODE_OF_CONDUCT.ja.md)
 ## 来源
 
 本行为标准改编自[贡献者公约][主页]，版本 1.4
-可在此观看 https://www.contributor-covenant.org/zh-cn/version/1/4/code-of-conduct.html
+可在此观看 <https://www.contributor-covenant.org/zh-cn/version/1/4/code-of-conduct.html>
 
 [主页]: https://www.contributor-covenant.org
