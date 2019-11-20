@@ -59,6 +59,7 @@
     "ts-polyfill": "^3.5.3"
   },
   "devDependencies": {
+    "@jedmao/semantic-release-npm-github-config": "^1.0.8",
     "@types/jest": "^24.0.23",
     "@types/json5": "0.0.30",
     "@types/lodash.chunk": "^4.2.6",
@@ -90,6 +91,7 @@
     "ts-loader": "^6.2.1",
     "ts-node": "^8.5.2",
     "tsconfig-paths-jest": "0.0.1",
+    "typedoc": "^0.15.2",
     "typescript": "^3.7.2",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
