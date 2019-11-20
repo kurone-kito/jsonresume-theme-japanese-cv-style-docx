@@ -1,6 +1,6 @@
-Language: [🇬🇧](./CODE_OF_CONDUCT.md) | [🇯🇵](./CODE_OF_CONDUCT.ja.md) | [🇨🇳](./CODE_OF_CONDUCT.zh.md)
-
 # コントリビューター行動規範
+
+Language: [🇬🇧](./CODE_OF_CONDUCT.md) | [🇯🇵](./CODE_OF_CONDUCT.ja.md) | [🇨🇳](./CODE_OF_CONDUCT.zh.md)
 
 ## 私たちの約束
 
@@ -42,6 +42,6 @@ Language: [🇬🇧](./CODE_OF_CONDUCT.md) | [🇯🇵](./CODE_OF_CONDUCT.ja.md)
 
 ## 帰属
 
-この行動規範は https://www.contributor-covenant.org/version/1/4/code-of-conduct.html にある [Contributor Covenant][homepage] バージョン 1.4 に適合しています。
+この行動規範は <https://www.contributor-covenant.org/version/1/4/code-of-conduct.html> にある [Contributor Covenant][homepage] バージョン 1.4 に適合しています。
 
 [homepage]: https://www.contributor-covenant.org
