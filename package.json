@@ -36,6 +36,7 @@
   },
   "main": "index.js",
   "scripts": {
+    "build:doc": "typedoc --exclude '**/*.spec.ts' --mode modules --out ./docs/ ./src/",
     "build:resume": "NODE_ICU_DATA=$(node-full-icu-path) node sample/build.js",
     "lint": "eslint --fix './**/*'",
     "prepack": "webpack",
