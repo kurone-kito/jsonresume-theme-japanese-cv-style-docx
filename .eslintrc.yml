@@ -4,7 +4,12 @@ env:
   jest/globals: true
   node: true
 extends:
+  # I want to know the best practices for the settings here.
+  # I don't know it, but this so many extends are enough to make it feel non-exemplary.
   - airbnb-base
+  - 'plugin:@typescript-eslint/recommended'
+  - 'plugin:@typescript-eslint/eslint-recommended'
+  - prettier
   - 'eslint:recommended'
   - 'plugin:jest/recommended'
   - 'plugin:prettier/recommended'
@@ -23,6 +28,8 @@ plugins:
   - jest
   - prettier
 rules:
+  '@typescript-eslint/explicit-function-return-type':
+    - 'off'
   '@typescript-eslint/no-unused-vars':
     - error
     - args: none
