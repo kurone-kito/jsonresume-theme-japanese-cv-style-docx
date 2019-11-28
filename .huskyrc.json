@@ -1,5 +1,5 @@
 {
   "hooks": {
-    "pre-push": "npm run lint || true"
+    "pre-push": "npm run test:lint || true"
   }
 }

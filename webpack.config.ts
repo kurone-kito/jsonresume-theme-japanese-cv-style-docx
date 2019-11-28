@@ -4,6 +4,7 @@ import webpack from 'webpack';
 import { dependencies, name } from './package.json';
 import { compilerOptions } from './tsconfig.json';
 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const DtsBundleWebpack = require('dts-bundle-webpack');
 
 const createAliases = () => {

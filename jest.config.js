@@ -1,3 +1,4 @@
+/* eslint @typescript-eslint/no-var-requires: off */
 const convPaths = require('tsconfig-paths-jest');
 
 const tsconfig = require('./tsconfig.json');
