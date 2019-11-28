@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file. See
 
 # 1.0.0 (2019-11-21)
 
-
 ### Bug Fixes
 
-* Linted the some markdown ([a0ea8ed](https://github.com/kurone-kito/jsonresume-theme-japanese-cv-style-docx/commit/a0ea8ed550b72ee55c0c895d665cb56539126b03))
+- Linted the some markdown ([a0ea8ed](https://github.com/kurone-kito/jsonresume-theme-japanese-cv-style-docx/commit/a0ea8ed550b72ee55c0c895d665cb56539126b03))
+- NOTE: From the perspective of Semantic Versioning, I didn't really want to release 1.0.0, but I didn't know how to use semantic-release.
