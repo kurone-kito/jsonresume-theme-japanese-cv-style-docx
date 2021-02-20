@@ -48,7 +48,7 @@
     "test:watch": "NODE_ICU_DATA=$(node-full-icu-path) jest --coverage --watch"
   },
   "engines": {
-    "node": ">=8.16"
+    "node": ">=12.20"
   },
   "dependencies": {
     "@kurone-kito/jsonresume-types": "^0.1.1",
