@@ -7,5 +7,5 @@ module.exports = {
   moduleFileExtensions: ['ts', 'tsx', 'js', 'json', 'node'],
   moduleNameMapper: convPaths(tsconfig),
   testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$',
-  transform: { '.tsx?$': 'ts-jest' }
+  transform: { '.tsx?$': 'ts-jest' },
 };

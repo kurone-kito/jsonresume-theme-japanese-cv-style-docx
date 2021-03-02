@@ -12,6 +12,6 @@ export default ({ name, date, summary }: Activity) =>
         ? [new TextRun({ text: `(${dateFormatter(new Date(date))})` })]
         : []),
       ...(name || date ? [new TextRun({ text: ': ' })] : []),
-      ...(summary ? [new TextRun({ text: summary })] : [])
-    ]
+      ...(summary ? [new TextRun({ text: summary })] : []),
+    ],
   });

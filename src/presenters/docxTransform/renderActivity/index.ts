@@ -8,8 +8,8 @@ export default (activities: Activity[] = []) =>
     ? [
         new Paragraph({
           heading: HeadingLevel.HEADING_2,
-          text: 'その他活動'
+          text: 'その他活動',
         }),
-        ...activities.map(item)
+        ...activities.map(item),
       ]
     : [];

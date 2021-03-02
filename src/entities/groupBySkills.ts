@@ -8,7 +8,7 @@ const levelMap = new Map([
   ['beginner', '☆☆☆'],
   ['intermediate', '★☆☆'],
   ['advanced', '★★☆'],
-  ['master', '★★★']
+  ['master', '★★★'],
 ]);
 
 const getTag = (tags: EnhancedSkill['tags']) =>
@@ -27,12 +27,12 @@ export default (skills: EnhancedSkill[] = []) =>
     sortBy(
       items.map(({ level = '', ...item }) => ({
         level: levelMap.get(level) || level,
-        ...item
+        ...item,
       })),
       ({ level }) => level
     ).map(({ tags = '', ...item }, index) => ({
       tail: index === items.length - 1,
       ...(index ? {} : { rowSpan: items.length, tag: getTag(tags) }),
-      ...item
+      ...item,
     }))
   );

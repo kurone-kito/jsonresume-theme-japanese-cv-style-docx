@@ -11,8 +11,8 @@ export default ({ body, heading }: Options) =>
     ? [
         new Paragraph({
           heading: HeadingLevel.HEADING_4,
-          text: `◇ ${heading} ◇`
+          text: `◇ ${heading} ◇`,
         }),
-        ...singleOrMulti(body)
+        ...singleOrMulti(body),
       ]
     : [];

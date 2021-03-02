@@ -12,5 +12,5 @@ export default (
     revision: meta.version,
     subject: 'Curriculum Vitae',
     styles,
-    title: '職務経歴書'
+    title: '職務経歴書',
   });

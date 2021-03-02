@@ -1,7 +1,7 @@
 import { EnhancedResume } from './entities/enhanced';
 import {
   TransformResumeUseCase,
-  TransformResumeUseCaseType
+  TransformResumeUseCaseType,
 } from './usecases/TransformResume';
 import Container from './container';
 

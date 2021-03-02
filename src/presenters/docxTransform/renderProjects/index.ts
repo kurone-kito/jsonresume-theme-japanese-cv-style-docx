@@ -8,8 +8,8 @@ export default (projects: EnhancedProject[] = []) =>
     ? [
         new Paragraph({
           heading: HeadingLevel.HEADING_2,
-          text: '主な職務経歴'
+          text: '主な職務経歴',
         }),
-        ...projects.flatMap(item)
+        ...projects.flatMap(item),
       ]
     : [];

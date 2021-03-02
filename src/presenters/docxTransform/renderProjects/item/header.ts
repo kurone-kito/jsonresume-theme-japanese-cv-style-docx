@@ -3,7 +3,7 @@ import {
   Paragraph,
   TableRow,
   TableCell,
-  VerticalAlign
+  VerticalAlign,
 } from 'docx';
 import { Project } from '~/entities';
 import dateFormatter from '~/entities/dateFormatter';
@@ -19,7 +19,7 @@ const getText = ({
   endDate,
   entity,
   name,
-  startDate
+  startDate,
 }: Pick<Project, Keys> = {}) => {
   const completedEndDate = getEndDate(endDate);
   const completedEntity = getEntity(entity);
@@ -38,14 +38,14 @@ export default (project: Pick<Project, Keys> = {}) => [
         children: [
           new Paragraph({
             heading: HeadingLevel.HEADING_3,
-            text: getText(project)
-          })
+            text: getText(project),
+          }),
         ],
         columnSpan: 2,
         margins: { left: 100, right: 100 },
         shading: { fill: 'seashell' },
-        verticalAlign: VerticalAlign.CENTER
-      })
-    ]
-  })
+        verticalAlign: VerticalAlign.CENTER,
+      }),
+    ],
+  }),
 ];

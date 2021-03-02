@@ -13,13 +13,13 @@ describe('length test', () => {
     [1, 1],
     [1, 2],
     [2, 1],
-    [2, 2]
+    [2, 2],
   ])(
     'argument: { publications: [{}, ...x%d],  volunteer: [{}, ...x%d] }',
     (publications, volunteer) => {
       const arg: Pick<ResumeSchema, 'publications' | 'volunteer'> = {
         publications: Array(publications).fill({}),
-        volunteer: Array(volunteer).fill({})
+        volunteer: Array(volunteer).fill({}),
       };
       const expected = publications + volunteer;
       it(`got array length is ${expected}`, () =>
@@ -32,7 +32,7 @@ const pattern: [string?, string?, string?][] = [
   ['foo', 'bar', undefined],
   ['hoge', undefined, 'fuga'],
   [undefined, 'qux', 'buz'],
-  ['corge', 'grault', 'xyzzy']
+  ['corge', 'grault', 'xyzzy'],
 ];
 const flattedPattern = pattern.flat();
 const createItemsDesc = (desc: string) => pattern.map(() => desc).join(', ');
@@ -45,14 +45,14 @@ describe.each<
   ]
 >([
   ['publications', 'name', 'releaseDate'],
-  ['volunteer', 'organization', 'startDate']
+  ['volunteer', 'organization', 'startDate'],
 ])('%s: single key test', (target, nameKey, dateKey) => {
   const itemDesc = `{ ${nameKey}: %p, ${dateKey}: %p, summary: %p }`;
   describe.each(pattern)(
     `argument: { ${target}: [${itemDesc}] }`,
     (name, date, summary) => {
       const arg: Pick<ResumeSchema, 'publications' | 'volunteer'> = {
-        [target]: [{ [nameKey]: name, [dateKey]: date, summary }]
+        [target]: [{ [nameKey]: name, [dateKey]: date, summary }],
       };
       const expected: Activity[] = [{ date, name, summary }];
       it(`got: ${JSON5.stringify(expected)}`, () =>
@@ -68,14 +68,14 @@ describe.each<
           ([name, date, summary]) => ({
             [nameKey]: name,
             [dateKey]: date,
-            summary
+            summary,
           })
-        )
+        ),
       };
       const expected = chunked.map<Activity>(([name, date, summary]) => ({
         date,
         name,
-        summary
+        summary,
       }));
       it(`Got: ${JSON5.stringify(expected)}`, () =>
         expect(createActivity(arg)).toStrictEqual(expected));
@@ -102,14 +102,14 @@ describe('combine keys test', () => {
           ([organization, startDate, summary]) => ({
             organization,
             startDate,
-            summary
+            summary,
           })
-        )
+        ),
       };
       const expected = chunked.map<Activity>(([name, date, summary]) => ({
         date,
         name,
-        summary
+        summary,
       }));
       it(`got: ${JSON5.stringify(expected)}`, () =>
         expect(createActivity(arg)).toStrictEqual(expected));

@@ -28,6 +28,6 @@ export class TransformResumeInteractor implements TransformResumeUseCase {
     this.presenter.transform({
       ...input,
       activities: createActivity(input),
-      skills: groupBySkills(skills)
+      skills: groupBySkills(skills),
     });
 }

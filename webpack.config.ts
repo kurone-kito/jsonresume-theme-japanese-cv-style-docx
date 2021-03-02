@@ -13,7 +13,7 @@ const createAliases = () => {
   return Object.fromEntries(
     Object.entries(compilerOptions.paths || {}).map(([key, [value]]) => [
       key.replace('*', ''),
-      path.resolve(baseUrl, value.replace('*', ''))
+      path.resolve(baseUrl, value.replace('*', '')),
     ])
   );
 };
@@ -31,27 +31,27 @@ export default (source: webpack.Configuration): webpack.Configuration => ({
         test: /\.tsx?$/,
         enforce: 'pre',
         loader: 'eslint-loader',
-        options: { configFile: '.eslintrc.yml' }
-      }
-    ]
+        options: { configFile: '.eslintrc.yml' },
+      },
+    ],
   },
   output: {
     filename: 'index.js',
     path: __dirname,
     library: name,
-    libraryTarget: 'umd'
+    libraryTarget: 'umd',
   },
   plugins: [
     new DtsBundleWebpack({
       indent: '  ',
       main: 'src/index.d.ts',
       name,
-      out: '../index.d.ts'
-    })
+      out: '../index.d.ts',
+    }),
   ],
   resolve: {
     alias: createAliases(),
-    extensions: ['.js', '.json', '.ts', '.tsx']
+    extensions: ['.js', '.json', '.ts', '.tsx'],
   },
-  target: 'node'
+  target: 'node',
 });

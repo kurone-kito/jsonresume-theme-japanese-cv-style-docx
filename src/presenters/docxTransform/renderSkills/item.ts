@@ -3,7 +3,7 @@ import {
   TableCell,
   Paragraph,
   BorderStyle,
-  VerticalAlign
+  VerticalAlign,
 } from 'docx';
 import { GroupedSkill } from '~/entities/groupBySkills';
 import singleOrMulti from '~/presenters/docxTransform/atoms/singleOrMulti';
@@ -20,13 +20,13 @@ const cellText = ({ body, mergin }: CellTextOptions = {}) =>
 
     ...(mergin
       ? { margins: { left: 100, right: 100 } }
-      : { margins: { left: 50, right: 50 } })
+      : { margins: { left: 50, right: 50 } }),
   });
 
 const createBorder = (enable = true) => ({
   color: enable ? 'auto' : 'white',
   size: enable ? 1 : 0,
-  style: enable ? BorderStyle.SINGLE : BorderStyle.NONE
+  style: enable ? BorderStyle.SINGLE : BorderStyle.NONE,
 });
 
 export default ({ keywords, level, name, rowSpan, tag, tail }: GroupedSkill) =>
@@ -41,13 +41,13 @@ export default ({ keywords, level, name, rowSpan, tag, tail }: GroupedSkill) =>
           bottom: createBorder(tail),
           left: createBorder(),
           right: createBorder(),
-          top: createBorder(!!rowSpan)
+          top: createBorder(!!rowSpan),
         },
-        verticalAlign: VerticalAlign.CENTER
+        verticalAlign: VerticalAlign.CENTER,
         // ...(rowSpan ? { rowSpan } : {})
       }),
       cellText({ body: name }),
       cellText({ body: level, mergin: true }),
-      cellText({ body: keywords })
-    ]
+      cellText({ body: keywords }),
+    ],
   });

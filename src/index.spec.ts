@@ -9,7 +9,7 @@ jest.mock('./container', () => ({ get: () => ({ handle: mockHandle }) }));
 describe('render() method: mock container.get() => { handle: async input => toBuffer(input) }', () => {
   describe.each<EnhancedResume>([
     { basics: { name: 'foo' } },
-    { basics: { name: 'bar' } }
+    { basics: { name: 'bar' } },
   ])('input: %o', input => {
     beforeEach(() => mockHandle.mockClear());
     it('the method bypasses an argument to the handle inner method.', () => {

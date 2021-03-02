@@ -1,7 +1,7 @@
 import { Paragraph, AlignmentType } from 'docx';
 
 const renderSingle = (text: string) => [
-  new Paragraph({ alignment: AlignmentType.LEFT, text })
+  new Paragraph({ alignment: AlignmentType.LEFT, text }),
 ];
 const renderMulti = (texts: string[]) =>
   texts.map(

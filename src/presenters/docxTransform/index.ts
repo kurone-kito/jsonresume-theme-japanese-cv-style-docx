@@ -28,8 +28,8 @@ export default class DOCXPresenter implements TransformPresenter {
         ...renderProjects(projects),
         ...renderSkills(skills),
         ...renderActivity(activities),
-        ...renderSuffix()
-      ]
+        ...renderSuffix(),
+      ],
     });
 
     return Packer.toBuffer(doc);

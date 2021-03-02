@@ -3,13 +3,13 @@ import DocxPresenter from './presenters/docxTransform';
 import {
   TransformResumeUseCaseType,
   TransformResumeInteractor,
-  TransformPresenterType
+  TransformPresenterType,
 } from './usecases/TransformResume';
 
 describe('container test', () => {
   it.each<[symbol, NewableFunction]>([
     [TransformResumeUseCaseType, TransformResumeInteractor],
-    [TransformPresenterType, DocxPresenter]
+    [TransformPresenterType, DocxPresenter],
   ])('Container.get(%p) => %p', (symbol, expected) =>
     expect(Container.get(symbol)).toBeInstanceOf(expected)
   );

@@ -5,7 +5,7 @@ import {
   TransformPresenterType,
   TransformResumeInteractor,
   TransformResumeUseCase,
-  TransformResumeUseCaseType
+  TransformResumeUseCaseType,
 } from './usecases/TransformResume';
 
 const container = new Container();
