@@ -6,7 +6,7 @@ const resume = require('./resume.json');
 
 const filename = path.resolve(__dirname, 'resume.docx');
 
-render(resume).then(buffer => {
+render(resume).then((buffer) => {
   fs.writeFileSync(filename, buffer);
   console.log(`writted: ${filename}`);
 });

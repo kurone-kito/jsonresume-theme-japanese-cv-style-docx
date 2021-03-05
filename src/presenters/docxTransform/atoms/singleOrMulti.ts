@@ -5,7 +5,8 @@ const renderSingle = (text: string) => [
 ];
 const renderMulti = (texts: string[]) =>
   texts.map(
-    text => new Paragraph({ alignment: AlignmentType.LEFT, text: `・${text}` })
+    (text) =>
+      new Paragraph({ alignment: AlignmentType.LEFT, text: `・${text}` })
   );
 
 export default (body?: string | string[]) =>
