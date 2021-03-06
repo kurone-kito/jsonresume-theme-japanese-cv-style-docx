@@ -20,7 +20,7 @@ export interface GroupedSkill extends Skill {
   tail: boolean;
 }
 
-export default (skills: EnhancedSkill[] = []) =>
+export default (skills: EnhancedSkill[] = []): GroupedSkill[] =>
   Object.entries(
     groupBy<EnhancedSkill>(skills, ({ tags }) => getTag(tags))
   ).flatMap<GroupedSkill>(([, items]) =>

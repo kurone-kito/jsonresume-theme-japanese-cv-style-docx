@@ -29,7 +29,14 @@ const createBorder = (enable = true) => ({
   style: enable ? BorderStyle.SINGLE : BorderStyle.NONE,
 });
 
-export default ({ keywords, level, name, rowSpan, tag, tail }: GroupedSkill) =>
+export default ({
+  keywords,
+  level,
+  name,
+  rowSpan,
+  tag,
+  tail,
+}: GroupedSkill): TableRow =>
   new TableRow({
     cantSplit: true,
 

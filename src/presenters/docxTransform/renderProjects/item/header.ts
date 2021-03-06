@@ -29,7 +29,7 @@ const getText = ({
   return `${completedName} ${completedEntity} / ${completedStartDate}〜${completedEndDate}`;
 };
 
-export default (project: Pick<Project, Keys> = {}) => [
+export default (project: Pick<Project, Keys> = {}): TableRow[] => [
   new TableRow({
     cantSplit: true,
 

@@ -7,7 +7,7 @@ export interface Arguments {
   meta?: Pick<Meta, 'lastModified'>;
 }
 
-export default ({ basics = {}, meta = {} }: Arguments = {}) => [
+export default ({ basics = {}, meta = {} }: Arguments = {}): Paragraph[] => [
   new Paragraph({
     alignment: AlignmentType.CENTER,
     heading: HeadingLevel.HEADING_1,

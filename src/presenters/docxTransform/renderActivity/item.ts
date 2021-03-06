@@ -3,7 +3,7 @@ import 'ts-polyfill/lib/es2019-array';
 import { Activity } from '~/entities/createActivity';
 import dateFormatter from '~/entities/dateFormatter';
 
-export default ({ name, date, summary }: Activity) =>
+export default ({ name, date, summary }: Activity): Paragraph =>
   new Paragraph({
     bullet: { level: 0 },
     children: [

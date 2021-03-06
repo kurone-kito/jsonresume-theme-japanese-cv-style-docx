@@ -3,7 +3,7 @@ import 'ts-polyfill/lib/es2019-array';
 import { Activity } from '~/entities/createActivity';
 import item from './item';
 
-export default (activities: Activity[] = []) =>
+export default (activities: Activity[] = []): Paragraph[] =>
   activities.length
     ? [
         new Paragraph({

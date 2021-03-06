@@ -3,4 +3,4 @@ const formatter = Intl.DateTimeFormat('ja-JP', {
   year: 'numeric',
 });
 
-export default (date?: number | Date) => formatter.format(date);
+export default (date?: number | Date): string => formatter.format(date);

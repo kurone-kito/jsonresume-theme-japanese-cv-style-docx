@@ -6,7 +6,7 @@ export interface Options {
   heading: string;
 }
 
-export default ({ body, heading }: Options) =>
+export default ({ body, heading }: Options): Paragraph[] =>
   body
     ? [
         new Paragraph({

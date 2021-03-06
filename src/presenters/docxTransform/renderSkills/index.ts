@@ -4,7 +4,7 @@ import { GroupedSkill } from '~/entities/groupBySkills';
 import header from './header';
 import item from './item';
 
-export default (skills: GroupedSkill[] = []) =>
+export default (skills: GroupedSkill[] = []): (Paragraph | Table)[] =>
   skills.length
     ? [
         new Paragraph({

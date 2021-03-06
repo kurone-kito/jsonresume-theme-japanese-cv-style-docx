@@ -9,7 +9,7 @@ const renderMulti = (texts: string[]) =>
       new Paragraph({ alignment: AlignmentType.LEFT, text: `・${text}` })
   );
 
-export default (body?: string | string[]) =>
+export default (body?: string | string[]): Paragraph[] =>
   body
     ? [...(Array.isArray(body) ? renderMulti(body) : renderSingle(body))]
     : [];

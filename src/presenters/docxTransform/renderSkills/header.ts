@@ -13,7 +13,7 @@ const headText = (text: string) =>
     verticalAlign: VerticalAlign.CENTER,
   });
 
-export default () =>
+export default (): TableRow =>
   new TableRow({
     cantSplit: true,
     children: [

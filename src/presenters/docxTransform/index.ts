@@ -18,8 +18,8 @@ export default class DOCXPresenter implements TransformPresenter {
     basics,
     meta,
     projects,
-    skills
-  }: OutputResume) => {
+    skills,
+  }: OutputResume): Promise<Buffer> => {
     const doc = createDocument(basics, meta);
     doc.addSection({
       children: [
@@ -31,7 +31,6 @@ export default class DOCXPresenter implements TransformPresenter {
         ...renderSuffix(),
       ],
     });
-
     return Packer.toBuffer(doc);
   };
 }

@@ -10,7 +10,7 @@ export type Keys =
   | 'highlights'
   | 'roles';
 
-export default (project: Pick<EnhancedProject, Keys> = {}) => [
+export default (project: Pick<EnhancedProject, Keys> = {}): Table[] => [
   new Table({
     width: { size: 100, type: WidthType.PERCENTAGE },
     rows: [

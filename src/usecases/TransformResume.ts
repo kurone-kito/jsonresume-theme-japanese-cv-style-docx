@@ -24,7 +24,10 @@ export class TransformResumeInteractor implements TransformResumeUseCase {
     this.presenter = presenter;
   }
 
-  public readonly handle = ({ skills, ...input }: EnhancedResume) =>
+  public readonly handle = ({
+    skills,
+    ...input
+  }: EnhancedResume): Promise<Buffer> =>
     this.presenter.transform({
       ...input,
       activities: createActivity(input),
