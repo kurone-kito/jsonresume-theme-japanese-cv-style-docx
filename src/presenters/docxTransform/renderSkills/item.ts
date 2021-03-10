@@ -17,7 +17,6 @@ const cellText = ({ body, mergin }: CellTextOptions = {}) =>
   new TableCell({
     children: singleOrMulti(body),
     verticalAlign: VerticalAlign.CENTER,
-
     ...(mergin
       ? { margins: { left: 100, right: 100 } }
       : { margins: { left: 50, right: 50 } }),
@@ -39,7 +38,6 @@ export default ({
 }: GroupedSkill): TableRow =>
   new TableRow({
     cantSplit: true,
-
     children: [
       // ! XXX: Provisionary implements, Because docx has a bug in rowSpan.
       new TableCell({

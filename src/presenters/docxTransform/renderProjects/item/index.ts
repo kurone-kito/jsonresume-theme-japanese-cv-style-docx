@@ -17,7 +17,6 @@ export default (project: Pick<EnhancedProject, Keys> = {}): Table[] => [
       ...header(project),
       new TableRow({
         cantSplit: true,
-
         children: [
           new TableCell({
             children: [

@@ -25,14 +25,12 @@ const getText = ({
   const completedEntity = getEntity(entity);
   const completedName = getName(name);
   const completedStartDate = getStartDate(startDate);
-
   return `${completedName} ${completedEntity} / ${completedStartDate}〜${completedEndDate}`;
 };
 
 export default (project: Pick<Project, Keys> = {}): TableRow[] => [
   new TableRow({
     cantSplit: true,
-
     children: [
       new TableCell({
         children: [

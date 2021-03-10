@@ -9,7 +9,6 @@ const DtsBundleWebpack = require('dts-bundle-webpack');
 
 const createAliases = () => {
   const baseUrl = path.resolve(__dirname, compilerOptions.baseUrl || '.');
-
   return Object.fromEntries(
     Object.entries(compilerOptions.paths || {}).map(([key, [value]]) => [
       key.replace('*', ''),

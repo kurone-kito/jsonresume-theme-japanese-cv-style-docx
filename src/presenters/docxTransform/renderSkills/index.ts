@@ -7,10 +7,7 @@ import item from './item';
 export default (skills: GroupedSkill[] = []): (Paragraph | Table)[] =>
   skills.length
     ? [
-        new Paragraph({
-          heading: HeadingLevel.HEADING_2,
-          text: '主なスキル',
-        }),
+        new Paragraph({ heading: HeadingLevel.HEADING_2, text: '主なスキル' }),
         new Table({
           columnWidths: [1000, 1000, 1000, 1000],
           width: { size: 100, type: WidthType.PERCENTAGE },
