@@ -6,33 +6,27 @@ env:
 extends:
   # I want to know the best practices for the settings here.
   # I don't know it, but this so many extends are enough to make it feel non-exemplary.
+  - eslint:recommended
   - airbnb-base
-  - 'plugin:@typescript-eslint/recommended'
-  - 'plugin:@typescript-eslint/eslint-recommended'
-  - prettier
-  - 'eslint:recommended'
-  - 'plugin:jest/recommended'
-  - 'plugin:prettier/recommended'
-  - prettier/@typescript-eslint
+  - airbnb-typescript/base
+  - plugin:import/recommended
+  - plugin:import/typescript
+  - plugin:@typescript-eslint/recommended
+  - plugin:@typescript-eslint/eslint-recommended
+  - plugin:prettier/recommended
+  - plugin:jest/recommended
 globals:
   window: true
 parser: '@typescript-eslint/parser'
 parserOptions:
-  ecmaFeatures:
-    jsx: true
   ecmaVersion: 2020
-  sourceType: module
-plugins:
-  - '@typescript-eslint'
-  - import
-  - jest
-  - prettier
+  project: ./tsconfig.json
 rules:
-  '@typescript-eslint/explicit-function-return-type':
-    - 'off'
-  '@typescript-eslint/no-unused-vars':
+  import/extensions:
     - error
-    - args: none
+    - ignorePackages
+    - js: never
+      ts: never
   import/no-extraneous-dependencies:
     - error
     - devDependencies:
