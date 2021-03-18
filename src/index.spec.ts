@@ -1,5 +1,5 @@
 import { render } from '.';
-import { EnhancedResume } from '~/entities/enhanced';
+import type { EnhancedResume } from '~/entities/enhanced';
 
 const mockHandle = jest.fn<Promise<Buffer>, EnhancedResume[]>(async (input) =>
   Buffer.from(JSON.stringify(input))

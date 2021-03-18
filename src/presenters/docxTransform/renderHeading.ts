@@ -1,5 +1,5 @@
 import { Paragraph, HeadingLevel, AlignmentType } from 'docx';
-import { Meta, Basics } from '~/entities';
+import type { Meta, Basics } from '~/entities';
 import dateFormatter from '~/entities/dateFormatter';
 
 export interface Arguments {

@@ -1,5 +1,5 @@
 import { WidthType, Table, TableRow, TableCell } from 'docx';
-import { EnhancedProject } from '~/entities/enhanced';
+import type { EnhancedProject } from '~/entities/enhanced';
 import header, { Keys as KeysForHeader } from './header';
 import detail from './detail';
 

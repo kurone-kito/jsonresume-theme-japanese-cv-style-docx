@@ -1,4 +1,4 @@
-import { IStylesOptions } from 'docx';
+import type { IStylesOptions } from 'docx';
 
 const styles: IStylesOptions = {
   paragraphStyles: [

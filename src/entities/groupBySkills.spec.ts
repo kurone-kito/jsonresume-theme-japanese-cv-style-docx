@@ -1,5 +1,5 @@
 import JSON5 from 'json5';
-import { EnhancedSkill } from '~/entities/enhanced';
+import type { EnhancedSkill } from '~/entities/enhanced';
 import groupBySkills, { GroupedSkill } from './groupBySkills';
 
 describe.each<[EnhancedSkill[] | undefined, GroupedSkill[]]>([

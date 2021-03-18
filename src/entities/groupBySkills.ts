@@ -1,8 +1,8 @@
 import groupBy from 'lodash.groupby';
 import sortBy from 'lodash.sortby';
 import 'ts-polyfill/lib/es2019-array';
-import { EnhancedSkill } from './enhanced';
-import { Skill } from '.';
+import type { EnhancedSkill } from './enhanced';
+import type { Skill } from '.';
 
 const levelMap = new Map([
   ['beginner', '☆☆☆'],

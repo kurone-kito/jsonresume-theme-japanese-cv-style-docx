@@ -1,6 +1,6 @@
 import { inject, injectable } from 'inversify';
 import 'reflect-metadata';
-import { EnhancedResume, OutputResume } from '~/entities/enhanced';
+import type { EnhancedResume, OutputResume } from '~/entities/enhanced';
 import createActivity from '~/entities/createActivity';
 import groupBySkills from '~/entities/groupBySkills';
 

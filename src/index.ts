@@ -1,4 +1,4 @@
-import { EnhancedResume } from './entities/enhanced';
+import type { EnhancedResume } from './entities/enhanced';
 import {
   TransformResumeUseCase,
   TransformResumeUseCaseType,

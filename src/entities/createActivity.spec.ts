@@ -1,8 +1,8 @@
 import JSON5 from 'json5';
 import chunk from 'lodash.chunk';
-import { ResumeSchema } from '@kurone-kito/jsonresume-types';
+import type { ResumeSchema } from '@kurone-kito/jsonresume-types';
 import 'ts-polyfill/lib/es2019-array';
-import { Publication, Volunteer } from '~/entities';
+import type { Publication, Volunteer } from '~/entities';
 import createActivity, { Activity } from './createActivity';
 
 describe('length test', () => {

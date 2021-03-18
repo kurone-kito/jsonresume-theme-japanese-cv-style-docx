@@ -1,4 +1,4 @@
-import { ResumeSchema } from '@kurone-kito/jsonresume-types';
+import type { ResumeSchema } from '@kurone-kito/jsonresume-types';
 
 export interface Activity {
   date?: string;
