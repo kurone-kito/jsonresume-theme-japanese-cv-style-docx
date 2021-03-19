@@ -19,18 +19,15 @@ export default class DOCXPresenter implements TransformPresenter {
     meta,
     projects,
     skills,
-  }: OutputResume): Promise<Buffer> => {
-    const doc = createDocument(basics, meta);
-    doc.addSection({
-      children: [
+  }: OutputResume): Promise<Buffer> =>
+    Packer.toBuffer(
+      createDocument(basics, meta, [
         ...renderHeading({ basics, meta }),
         ...renderSummary(basics),
         ...renderProjects(projects),
         ...renderSkills(skills),
         ...renderActivity(activities),
         ...renderSuffix(),
-      ],
-    });
-    return Packer.toBuffer(doc);
-  };
+      ])
+    );
 }
