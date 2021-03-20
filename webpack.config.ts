@@ -1,3 +1,4 @@
+import ESLintPlugin from 'eslint-webpack-plugin';
 import path from 'path';
 import 'ts-polyfill/lib/es2019-object';
 import webpack from 'webpack';
@@ -17,23 +18,12 @@ const createAliases = () => {
   );
 };
 
-export default (source: webpack.Configuration): webpack.Configuration => ({
-  ...source,
+export default <webpack.Configuration>{
   cache: true,
   devtool: false,
   externals: Object.keys(dependencies || {}),
   mode: 'production',
-  module: {
-    rules: [
-      { test: /\.tsx?$/, use: 'ts-loader' },
-      {
-        test: /\.tsx?$/,
-        enforce: 'pre',
-        loader: 'eslint-loader',
-        options: { configFile: '.eslintrc.yml' },
-      },
-    ],
-  },
+  module: { rules: [{ test: /\.ts$/, use: 'ts-loader' }] },
   output: {
     filename: 'index.js',
     path: __dirname,
@@ -47,10 +37,8 @@ export default (source: webpack.Configuration): webpack.Configuration => ({
       name,
       out: '../index.d.ts',
     }),
+    new ESLintPlugin({}),
   ],
-  resolve: {
-    alias: createAliases(),
-    extensions: ['.js', '.json', '.ts', '.tsx'],
-  },
+  resolve: { alias: createAliases(), extensions: ['.js', '.json', '.ts'] },
   target: 'node',
-});
+};
