@@ -4,16 +4,17 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>@kurone-kito/jsonresume-theme-japanese-cv-style-docx</title>
-	<meta name="description" content="">
+	<meta name="description" content="Documentation for @kurone-kito/jsonresume-theme-japanese-cv-style-docx">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/css/main.css">
+	<script async src="assets/js/search.js" id="search-script"></script>
 </head>
 <body>
 <header>
 	<div class="tsd-page-toolbar">
 		<div class="container">
 			<div class="table-wrap">
-				<div class="table-cell" id="tsd-search" data-index="assets/js/search.js" data-base=".">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
 					<div class="field">
 						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
 						<input id="tsd-search-field" type="text" />
@@ -40,8 +41,6 @@
 							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
 							<input type="checkbox" id="tsd-filter-externals" checked />
 							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
-							<input type="checkbox" id="tsd-filter-only-exported" />
-							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
 						</div>
 					</div>
 					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
@@ -51,12 +50,7 @@
 	</div>
 	<div class="tsd-page-title">
 		<div class="container">
-			<ul class="tsd-breadcrumb">
-				<li>
-					<a href="globals.html">Globals</a>
-				</li>
-			</ul>
-			<h1> @kurone-kito/jsonresume-theme-japanese-cv-style-docx</h1>
+			<h1>@kurone-kito/jsonresume-theme-japanese-cv-style-docx</h1>
 		</div>
 	</div>
 </header>
@@ -64,44 +58,69 @@
 	<div class="row">
 		<div class="col-8 col-content">
 			<div class="tsd-panel tsd-typography">
-				<a href="#jsonresume-theme-japanese-cv-style-docx" id="jsonresume-theme-japanese-cv-style-docx" style="color: inherit; text-decoration: none;">
-					<h1>jsonresume-theme-japanese-cv-style-docx</h1>
+				<a href="#kurone-kitojsonresume-theme-japanese-cv-style-docx" id="kurone-kitojsonresume-theme-japanese-cv-style-docx" style="color: inherit; text-decoration: none;">
+					<h1>“@kurone-kito/jsonresume-theme-japanese-cv-style-docx”</h1>
 				</a>
 				<p><a href="https://badge.fury.io/js/%40kurone-kito%2Fjsonresume-theme-japanese-cv-style-docx"><img src="https://badge.fury.io/js/%40kurone-kito%2Fjsonresume-theme-japanese-cv-style-docx.svg" alt="npm version"></a>
 				<a href="https://coveralls.io/github/kurone-kito/jsonresume-theme-japanese-cv-style-docx?branch=master"><img src="https://coveralls.io/repos/github/kurone-kito/jsonresume-theme-japanese-cv-style-docx/badge.svg?branch=master" alt="Coverage Status"></a></p>
-				<p>Generate a Word docx file of Japanese-style resume (職務経歴書) from JSON Resume</p>
+				<p>JSON Resume から、日本のお堅い系企業ウケしそうな職務経歴書の Word DOCX
+					ファイルを生成する NPM パッケージです。既存のテーマは揃いも揃ってモダンで、
+				かつ Word DOCX を出力できるテーマが見当たりませんでしたので、制作しました。</p>
+				<p>An NPM package that generates a Word DOCX file of Japanese-style resume
+					from JSON Resume. The existing themes are all modern and stylish. And then
+				cannot found that can output Word DOCX.</p>
+				<a href="#requires" id="requires" style="color: inherit; text-decoration: none;">
+					<h2>Requires</h2>
+				</a>
+				<a href="#strongly-recommended" id="strongly-recommended" style="color: inherit; text-decoration: none;">
+					<h3>Strongly recommended</h3>
+				</a>
+				<ul>
+					<li>Node.js &gt;= v15.4 (On ARM64 e.g. Apple M1)</li>
+					<li>Node.js &gt;= v14 (On x86-64)</li>
+				</ul>
+				<a href="#or" id="or" style="color: inherit; text-decoration: none;">
+					<h3>or</h3>
+				</a>
+				<ul>
+					<li>Node.js &gt;= v12.20 and &lt; v14, and <a href="https://github.com/unicode-org/full-icu-npm">a latest <code>full-icu</code> package</a> (On x86-64)</li>
+				</ul>
 				<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
 					<h2>Usage</h2>
 				</a>
-				<pre><code class="language-sh">npm install --save @kurone-kito/jsonresume-theme-japanese-cv-style-docx</code></pre>
-				<pre><code class="language-JavaScript"><span class="hljs-keyword">const</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">'fs'</span>);
-<span class="hljs-keyword">const</span> { render } = <span class="hljs-built_in">require</span>(<span class="hljs-string">'@kurone-kito/jsonresume-theme-japanese-cv-style-docx'</span>);
-<span class="hljs-comment">// import render from '@kurone-kito/jsonresume-theme-japanese-cv-style-docx';</span>
-<span class="hljs-keyword">const</span> resume = <span class="hljs-built_in">require</span>(<span class="hljs-string">'./resume.json'</span>);
+				<pre><code class="language-sh"><span style="color: #000000">npm install --save @kurone-kito/jsonresume-theme-japanese-cv-style-docx</span>
+</code></pre>
+				<pre><code class="language-JavaScript"><span style="color: #AF00DB">import</span><span style="color: #000000"> </span><span style="color: #001080">fs</span><span style="color: #000000"> </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;fs&#039;</span><span style="color: #000000">;</span>
+<span style="color: #AF00DB">import</span><span style="color: #000000"> </span><span style="color: #001080">render</span><span style="color: #000000"> </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;@kurone-kito/jsonresume-theme-japanese-cv-style-docx&#039;</span><span style="color: #000000">;</span>
+<span style="color: #008000">// // ⬆️ or ⬇️</span>
+<span style="color: #008000">// const { render } = require(&#039;@kurone-kito/jsonresume-theme-japanese-cv-style-docx&#039;);</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">resume</span><span style="color: #000000"> = </span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;./resume.json&#039;</span><span style="color: #000000">);</span>
 
-<span class="hljs-keyword">const</span> filename = <span class="hljs-string">'resume.docx'</span>;
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">filename</span><span style="color: #000000"> = </span><span style="color: #A31515">&#039;resume.docx&#039;</span><span style="color: #000000">;</span>
 
-render(resume).then(<span class="hljs-function"><span class="hljs-params">buffer</span> =&gt;</span> {
-  fs.writeFileSync(filename, buffer);
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`writted: <span class="hljs-subst">${filename}</span>`</span>);
-});</code></pre>
+<span style="color: #795E26">render</span><span style="color: #000000">(</span><span style="color: #001080">resume</span><span style="color: #000000">).</span><span style="color: #795E26">then</span><span style="color: #000000">(</span><span style="color: #001080">buffer</span><span style="color: #000000"> </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
+<span style="color: #000000">  </span><span style="color: #001080">fs</span><span style="color: #000000">.</span><span style="color: #795E26">writeFileSync</span><span style="color: #000000">(</span><span style="color: #001080">filename</span><span style="color: #000000">, </span><span style="color: #001080">buffer</span><span style="color: #000000">);</span>
+<span style="color: #000000">  </span><span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #A31515">`writted: </span><span style="color: #0000FF">${</span><span style="color: #001080">filename</span><span style="color: #0000FF">}</span><span style="color: #A31515">`</span><span style="color: #000000">);</span>
+<span style="color: #000000">});</span>
+</code></pre>
 				<a href="#api" id="api" style="color: inherit; text-decoration: none;">
 					<h2>API</h2>
 				</a>
 				<a href="#render" id="render" style="color: inherit; text-decoration: none;">
 					<h3>render()</h3>
 				</a>
-				<pre><code class="language-TypeScript">render(resume: EnhancedResume): <span class="hljs-built_in">Promise</span>&lt;Buffer&gt;</code></pre>
+				<pre><code class="language-TypeScript"><span style="color: #795E26">render</span><span style="color: #000000">(</span><span style="color: #001080">resume</span><span style="color: #000000">: </span><span style="color: #001080">EnhancedResume</span><span style="color: #000000">): </span><span style="color: #267F99">Promise</span><span style="color: #000000">&lt;</span><span style="color: #001080">Buffer</span><span style="color: #000000">&gt;</span>
+</code></pre>
 				<a href="#params" id="params" style="color: inherit; text-decoration: none;">
 					<h4>Params</h4>
 				</a>
 				<ul>
-					<li>resume: A JSON Resume object.</li>
+					<li>resume: A JSON Resume object. (See following: <a href="#enhancedresume">EnhancedResume</a>)</li>
 				</ul>
 				<a href="#returns" id="returns" style="color: inherit; text-decoration: none;">
 					<h4>Returns</h4>
 				</a>
-				<p>Body of the docx file.</p>
+				<p>Body of the Word DOCX file.</p>
 				<a href="#types" id="types" style="color: inherit; text-decoration: none;">
 					<h2>Types</h2>
 				</a>
@@ -109,28 +128,29 @@ render(resume).then(<span class="hljs-function"><span class="hljs-params">buffer
 					<h3>EnhancedResume</h3>
 				</a>
 				<p>Enhanced definition of the JSON Resume.</p>
-				<pre><code class="language-JSON">{
-  &quot;projects&quot;: [
-    {
-      ...
-      &quot;env&quot;: {
-        &quot;os&quot;: [&quot;Windows XP&quot;, &quot;AIX&quot;],
-        &quot;language&quot;: [&quot;PL/I&quot;, &quot;COBOL&quot;],
-        &quot;platforms&quot;: [&quot;Excel 2000&quot;]
-      }
-    }
-  ],
-  &quot;skills&quot;: [
-    {
-      ...
-      &quot;tags&quot;: &quot;language&quot;
-    },
-    {
-      ...
-      &quot;tags&quot;: [&quot;tools&quot;, &quot;foobar&quot;]
-    }
-  ]
-}</code></pre>
+				<pre><code class="language-JSON"><span style="color: #000000">{</span>
+<span style="color: #000000">  </span><span style="color: #0451A5">&quot;projects&quot;</span><span style="color: #000000">: [</span>
+<span style="color: #000000">    {</span>
+<span style="color: #000000">      </span><span style="color: #CD3131">...</span>
+<span style="color: #000000">      </span><span style="color: #0451A5">&quot;env&quot;</span><span style="color: #000000">: {</span>
+<span style="color: #000000">        </span><span style="color: #0451A5">&quot;os&quot;</span><span style="color: #000000">: [</span><span style="color: #A31515">&quot;Windows XP&quot;</span><span style="color: #000000">, </span><span style="color: #A31515">&quot;AIX&quot;</span><span style="color: #000000">],</span>
+<span style="color: #000000">        </span><span style="color: #0451A5">&quot;language&quot;</span><span style="color: #000000">: [</span><span style="color: #A31515">&quot;PL/I&quot;</span><span style="color: #000000">, </span><span style="color: #A31515">&quot;COBOL&quot;</span><span style="color: #000000">],</span>
+<span style="color: #000000">        </span><span style="color: #0451A5">&quot;platforms&quot;</span><span style="color: #000000">: [</span><span style="color: #A31515">&quot;Excel 2000&quot;</span><span style="color: #000000">]</span>
+<span style="color: #000000">      }</span>
+<span style="color: #000000">    }</span>
+<span style="color: #000000">  ],</span>
+<span style="color: #000000">  </span><span style="color: #0451A5">&quot;skills&quot;</span><span style="color: #000000">: [</span>
+<span style="color: #000000">    {</span>
+<span style="color: #000000">      </span><span style="color: #CD3131">...</span>
+<span style="color: #000000">      </span><span style="color: #0451A5">&quot;tags&quot;</span><span style="color: #000000">: </span><span style="color: #A31515">&quot;language&quot;</span>
+<span style="color: #000000">    },</span>
+<span style="color: #000000">    {</span>
+<span style="color: #000000">      </span><span style="color: #CD3131">...</span>
+<span style="color: #000000">      </span><span style="color: #0451A5">&quot;tags&quot;</span><span style="color: #000000">: [</span><span style="color: #A31515">&quot;tools&quot;</span><span style="color: #000000">, </span><span style="color: #A31515">&quot;foobar&quot;</span><span style="color: #000000">]</span>
+<span style="color: #000000">    }</span>
+<span style="color: #000000">  ]</span>
+<span style="color: #000000">}</span>
+</code></pre>
 				<a href="#license" id="license" style="color: inherit; text-decoration: none;">
 					<h2>License</h2>
 				</a>
@@ -140,80 +160,80 @@ render(resume).then(<span class="hljs-function"><span class="hljs-params">buffer
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 			<nav class="tsd-navigation primary">
 				<ul>
-					<li class="globals  ">
-						<a href="globals.html"><em>Globals</em></a>
+					<li class=" ">
+						<a href="modules.html">Exports</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_container_.html">&quot;container&quot;</a>
+					<li class=" tsd-kind-module">
+						<a href="modules/container.html">container</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_entities_createactivity_.html">&quot;entities/create<wbr>Activity&quot;</a>
+					<li class=" tsd-kind-module">
+						<a href="modules/entities.html">entities</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_entities_dateformatter_.html">&quot;entities/date<wbr>Formatter&quot;</a>
+					<li class=" tsd-kind-module">
+						<a href="modules/entities_createactivity.html">entities/create<wbr>Activity</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_entities_enhanced_.html">&quot;entities/enhanced&quot;</a>
+					<li class=" tsd-kind-module">
+						<a href="modules/entities_dateformatter.html">entities/date<wbr>Formatter</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_entities_groupbyskills_.html">&quot;entities/group<wbr>BySkills&quot;</a>
+					<li class=" tsd-kind-module">
+						<a href="modules/entities_enhanced.html">entities/enhanced</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_entities_index_.html">&quot;entities/index&quot;</a>
+					<li class=" tsd-kind-module">
+						<a href="modules/entities_groupbyskills.html">entities/group<wbr>BySkills</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_index_.html">&quot;index&quot;</a>
+					<li class=" tsd-kind-module">
+						<a href="modules/index.html">index</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_presenters_docxtransform_atoms_singleormulti_.html">&quot;presenters/docx<wbr>Transform/atoms/single<wbr>OrMulti&quot;</a>
+					<li class=" tsd-kind-module">
+						<a href="modules/presenters_docxtransform.html">presenters/docx<wbr>Transform</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_presenters_docxtransform_createdocument_.html">&quot;presenters/docx<wbr>Transform/create<wbr>Document&quot;</a>
+					<li class=" tsd-kind-module">
+						<a href="modules/presenters_docxtransform_atoms_singleormulti.html">presenters/docx<wbr>Transform/atoms/single<wbr>OrMulti</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_presenters_docxtransform_index_.html">&quot;presenters/docx<wbr>Transform/index&quot;</a>
+					<li class=" tsd-kind-module">
+						<a href="modules/presenters_docxtransform_createdocument.html">presenters/docx<wbr>Transform/create<wbr>Document</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_presenters_docxtransform_renderactivity_index_.html">&quot;presenters/docx<wbr>Transform/render<wbr>Activity/index&quot;</a>
+					<li class=" tsd-kind-module">
+						<a href="modules/presenters_docxtransform_renderactivity.html">presenters/docx<wbr>Transform/render<wbr>Activity</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_presenters_docxtransform_renderactivity_item_.html">&quot;presenters/docx<wbr>Transform/render<wbr>Activity/item&quot;</a>
+					<li class=" tsd-kind-module">
+						<a href="modules/presenters_docxtransform_renderactivity_item.html">presenters/docx<wbr>Transform/render<wbr>Activity/item</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_presenters_docxtransform_renderheading_.html">&quot;presenters/docx<wbr>Transform/render<wbr>Heading&quot;</a>
+					<li class=" tsd-kind-module">
+						<a href="modules/presenters_docxtransform_renderheading.html">presenters/docx<wbr>Transform/render<wbr>Heading</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_presenters_docxtransform_renderprojects_index_.html">&quot;presenters/docx<wbr>Transform/render<wbr>Projects/index&quot;</a>
+					<li class=" tsd-kind-module">
+						<a href="modules/presenters_docxtransform_renderprojects.html">presenters/docx<wbr>Transform/render<wbr>Projects</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_presenters_docxtransform_renderprojects_item_detail_.html">&quot;presenters/docx<wbr>Transform/render<wbr>Projects/item/detail&quot;</a>
+					<li class=" tsd-kind-module">
+						<a href="modules/presenters_docxtransform_renderprojects_item.html">presenters/docx<wbr>Transform/render<wbr>Projects/item</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_presenters_docxtransform_renderprojects_item_header_.html">&quot;presenters/docx<wbr>Transform/render<wbr>Projects/item/header&quot;</a>
+					<li class=" tsd-kind-module">
+						<a href="modules/presenters_docxtransform_renderprojects_item_detail.html">presenters/docx<wbr>Transform/render<wbr>Projects/item/detail</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_presenters_docxtransform_renderprojects_item_index_.html">&quot;presenters/docx<wbr>Transform/render<wbr>Projects/item/index&quot;</a>
+					<li class=" tsd-kind-module">
+						<a href="modules/presenters_docxtransform_renderprojects_item_header.html">presenters/docx<wbr>Transform/render<wbr>Projects/item/header</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_presenters_docxtransform_renderskills_header_.html">&quot;presenters/docx<wbr>Transform/render<wbr>Skills/header&quot;</a>
+					<li class=" tsd-kind-module">
+						<a href="modules/presenters_docxtransform_renderskills.html">presenters/docx<wbr>Transform/render<wbr>Skills</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_presenters_docxtransform_renderskills_index_.html">&quot;presenters/docx<wbr>Transform/render<wbr>Skills/index&quot;</a>
+					<li class=" tsd-kind-module">
+						<a href="modules/presenters_docxtransform_renderskills_header.html">presenters/docx<wbr>Transform/render<wbr>Skills/header</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_presenters_docxtransform_renderskills_item_.html">&quot;presenters/docx<wbr>Transform/render<wbr>Skills/item&quot;</a>
+					<li class=" tsd-kind-module">
+						<a href="modules/presenters_docxtransform_renderskills_item.html">presenters/docx<wbr>Transform/render<wbr>Skills/item</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_presenters_docxtransform_rendersuffix_.html">&quot;presenters/docx<wbr>Transform/render<wbr>Suffix&quot;</a>
+					<li class=" tsd-kind-module">
+						<a href="modules/presenters_docxtransform_rendersuffix.html">presenters/docx<wbr>Transform/render<wbr>Suffix</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_presenters_docxtransform_rendersummary_.html">&quot;presenters/docx<wbr>Transform/render<wbr>Summary&quot;</a>
+					<li class=" tsd-kind-module">
+						<a href="modules/presenters_docxtransform_rendersummary.html">presenters/docx<wbr>Transform/render<wbr>Summary</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_presenters_docxtransform_styles_.html">&quot;presenters/docx<wbr>Transform/styles&quot;</a>
+					<li class=" tsd-kind-module">
+						<a href="modules/presenters_docxtransform_styles.html">presenters/docx<wbr>Transform/styles</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_usecases_transformresume_.html">&quot;usecases/<wbr>Transform<wbr>Resume&quot;</a>
+					<li class=" tsd-kind-module">
+						<a href="modules/usecases_transformresume.html">usecases/<wbr>Transform<wbr>Resume</a>
 					</li>
 				</ul>
 			</nav>
@@ -229,57 +249,15 @@ render(resume).then(<span class="hljs-function"><span class="hljs-params">buffer
 		<h2>Legend</h2>
 		<div class="tsd-legend-group">
 			<ul class="tsd-legend">
-				<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
-				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
 				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
 				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
-				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
-				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
 				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
-				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
-				<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
-				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
-				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
-				<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
-				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
-				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
-				<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
-				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
 			</ul>
 		</div>
 	</div>
@@ -289,6 +267,5 @@ render(resume).then(<span class="hljs-function"><span class="hljs-params">buffer
 </div>
 <div class="overlay"></div>
 <script src="assets/js/main.js"></script>
-<script>if (location.protocol == 'file:') document.write('<script src="assets/js/search.js"><' + '/script>');</script>
 </body>
 </html>
