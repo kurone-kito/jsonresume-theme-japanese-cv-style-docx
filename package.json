@@ -1,6 +1,6 @@
 {
   "name": "@kurone-kito/jsonresume-theme-japanese-cv-style-docx",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Generate a Word docx file of Japanese-style resume (職務経歴書) from JSON Resume",
   "author": "kurone-kito",
   "license": "MIT",
