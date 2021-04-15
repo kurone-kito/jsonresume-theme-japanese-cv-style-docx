@@ -13,11 +13,14 @@ cannot found that can output Word DOCX.
 
 ## Requires
 
-Node.js &gt;= v13 (**Strongly recommended**)
+### Strongly recommended
 
-or
+- Node.js &gt;= v15.4 (On ARM64 e.g. Apple M1)
+- Node.js &gt;= v14 (On x86-64)
 
-Node.js &gt;= v8.10 and &lt; v13, and [a latest `full-icu` package](https://github.com/unicode-org/full-icu-npm)
+### or
+
+- Node.js &gt;= v12.20 and &lt; v14, and [a latest `full-icu` package](https://github.com/unicode-org/full-icu-npm) (On x86-64)
 
 ## Usage
 

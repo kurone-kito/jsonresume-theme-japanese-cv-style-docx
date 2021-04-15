@@ -1,6 +1,6 @@
 const formatter = Intl.DateTimeFormat('ja-JP', {
+  month: 'long',
   year: 'numeric',
-  month: 'long'
 });
 
-export default (date?: number | Date) => formatter.format(date);
+export default (date?: number | Date): string => formatter.format(date);

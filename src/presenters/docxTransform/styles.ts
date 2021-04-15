@@ -1,4 +1,4 @@
-import { IStylesOptions } from 'docx';
+import type { IStylesOptions } from 'docx';
 
 const styles: IStylesOptions = {
   paragraphStyles: [
@@ -7,30 +7,30 @@ const styles: IStylesOptions = {
       name: 'Heading 1',
       basedOn: 'Normal',
       next: 'Normal',
-      run: { size: 32 }
+      run: { size: 32 },
     },
     {
       id: 'Heading2',
       name: 'Heading 2',
       basedOn: 'Normal',
       next: 'Normal',
-      run: { size: 24 }
+      run: { size: 24 },
     },
     {
       id: 'Heading3',
       name: 'Heading 3',
       basedOn: 'Normal',
       next: 'Normal',
-      run: { size: 21 }
+      run: { size: 21 },
     },
     {
       id: 'Heading4',
       name: 'Heading 4',
       basedOn: 'Normal',
       next: 'Normal',
-      run: { size: 21 }
-    }
-  ]
+      run: { size: 21 },
+    },
+  ],
 };
 
 export default styles;

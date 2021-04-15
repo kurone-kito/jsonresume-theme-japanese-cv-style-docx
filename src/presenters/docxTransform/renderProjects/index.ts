@@ -1,15 +1,15 @@
-import { Paragraph, HeadingLevel } from 'docx';
+import { Paragraph, HeadingLevel, Table } from 'docx';
 import 'ts-polyfill/lib/es2019-array';
-import { EnhancedProject } from '~/entities/enhanced';
+import type { EnhancedProject } from '~/entities/enhanced';
 import item from './item';
 
-export default (projects: EnhancedProject[] = []) =>
+export default (projects: EnhancedProject[] = []): (Table | Paragraph)[] =>
   projects.length
     ? [
         new Paragraph({
           heading: HeadingLevel.HEADING_2,
-          text: '主な職務経歴'
+          text: '主な職務経歴',
         }),
-        ...projects.flatMap(item)
+        ...projects.flatMap(item),
       ]
     : [];

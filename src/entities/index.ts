@@ -1,4 +1,4 @@
-import { ResumeSchema } from '@kurone-kito/jsonresume-types';
+import type { ResumeSchema } from '@kurone-kito/jsonresume-types';
 
 export type Award = NonNullable<ResumeSchema['awards']>[number];
 export type Basics = NonNullable<ResumeSchema['basics']>;

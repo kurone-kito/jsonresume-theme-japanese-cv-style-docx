@@ -1,5 +1,5 @@
 import { Paragraph, HeadingLevel, AlignmentType } from 'docx';
-import { Meta, Basics } from '~/entities';
+import type { Meta, Basics } from '~/entities';
 import dateFormatter from '~/entities/dateFormatter';
 
 export interface Arguments {
@@ -7,17 +7,17 @@ export interface Arguments {
   meta?: Pick<Meta, 'lastModified'>;
 }
 
-export default ({ basics = {}, meta = {} }: Arguments = {}) => [
+export default ({ basics = {}, meta = {} }: Arguments = {}): Paragraph[] => [
   new Paragraph({
     alignment: AlignmentType.CENTER,
     heading: HeadingLevel.HEADING_1,
-    text: '職務経歴書'
+    text: '職務経歴書',
   }),
   new Paragraph({
     alignment: AlignmentType.RIGHT,
-    text: `${dateFormatter(new Date(meta.lastModified || new Date()))} 現在`
+    text: `${dateFormatter(new Date(meta.lastModified || new Date()))} 現在`,
   }),
   ...(basics.name
     ? [new Paragraph({ alignment: AlignmentType.RIGHT, text: basics.name })]
-    : [])
+    : []),
 ];

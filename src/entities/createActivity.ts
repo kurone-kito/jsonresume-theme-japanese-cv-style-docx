@@ -1,4 +1,4 @@
-import { ResumeSchema } from '@kurone-kito/jsonresume-types';
+import type { ResumeSchema } from '@kurone-kito/jsonresume-types';
 
 export interface Activity {
   date?: string;
@@ -8,16 +8,16 @@ export interface Activity {
 
 export default ({
   publications = [],
-  volunteer = []
+  volunteer = [],
 }: Pick<ResumeSchema, 'publications' | 'volunteer'>): Activity[] => [
   ...publications.map(({ name, releaseDate: date, summary }) => ({
     date,
     name,
-    summary
+    summary,
   })),
   ...volunteer.map(({ organization: name, startDate: date, summary }) => ({
     date,
     name,
-    summary
-  }))
+    summary,
+  })),
 ];

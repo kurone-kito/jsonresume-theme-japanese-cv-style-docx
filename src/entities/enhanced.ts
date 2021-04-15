@@ -1,7 +1,7 @@
-import { ResumeSchema } from '@kurone-kito/jsonresume-types';
-import { Activity } from './createActivity';
-import { GroupedSkill } from './groupBySkills';
-import { Project, Skill } from '.';
+import type { ResumeSchema } from '@kurone-kito/jsonresume-types';
+import type { Activity } from './createActivity';
+import type { GroupedSkill } from './groupBySkills';
+import type { Project, Skill } from '.';
 
 export interface ProjectEnv {
   languages?: string[];
