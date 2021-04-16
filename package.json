@@ -39,6 +39,7 @@
     "build:doc": "typedoc --exclude '**/*.spec.ts' --out ./docs/ ./src/",
     "build:resume": "NODE_ICU_DATA=$(node-full-icu-path) node sample/build.js",
     "prepack": "webpack",
+    "prepare": "node -e \"console.log(`NODE_ICU_DATA=${require('full-icu').datPath()}`)\" > .env",
     "semantic-release": "semantic-release",
     "start": "webpack --watch",
     "test": "run-p test:lint test:jest",
