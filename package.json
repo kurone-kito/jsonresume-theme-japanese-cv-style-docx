@@ -37,16 +37,16 @@
   "main": "index.js",
   "scripts": {
     "build:doc": "typedoc --exclude '**/*.spec.ts' --out ./docs/ ./src/",
-    "build:resume": "NODE_ICU_DATA=$(node-full-icu-path) node sample/build.js",
+    "build:resume": "dotenv node sample/build.js",
     "prepack": "webpack",
     "prepare": "node -e \"console.log(`NODE_ICU_DATA=${require('full-icu').datPath()}`)\" > .env",
     "semantic-release": "semantic-release",
     "start": "webpack --watch",
     "test": "run-p test:lint test:jest",
-    "test:jest": "NODE_ICU_DATA=$(node-full-icu-path) jest --coverage",
+    "test:jest": "dotenv jest --coverage",
     "test:lint": "eslint --fix './**/*'",
-    "test:coveralls": "NODE_ICU_DATA=$(node-full-icu-path) jest --coverage --coverageReporters=text-lcov | coveralls",
-    "test:watch": "NODE_ICU_DATA=$(node-full-icu-path) jest --coverage --watch"
+    "test:coveralls": "dotenv jest --coverage --coverageReporters=text-lcov | coveralls",
+    "test:watch": "dotenv jest --coverage --watch"
   },
   "engines": {
     "node": ">=12.20"
