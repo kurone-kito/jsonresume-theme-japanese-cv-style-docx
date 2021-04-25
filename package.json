@@ -44,7 +44,7 @@
     "start": "webpack --watch",
     "test": "run-p test:lint test:jest",
     "test:jest": "dotenv jest --coverage",
-    "test:lint": "eslint --fix \"./**/*\"",
+    "test:lint": "eslint --cache --fix .",
     "test:coveralls": "dotenv jest --coverage --coverageReporters=text-lcov | coveralls",
     "test:watch": "dotenv jest --coverage --watch"
   },
