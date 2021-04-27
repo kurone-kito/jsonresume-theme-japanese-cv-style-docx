@@ -37,7 +37,7 @@
   "main": "index.js",
   "scripts": {
     "build:doc": "typedoc --exclude '**/*.spec.ts' --out ./docs/ ./src/",
-    "build:resume": "dotenv node sample/build.js",
+    "build:resume": "dotenv -- node sample/build.js",
     "prepack": "webpack",
     "prepare": "run-s prepare:*",
     "prepare:dotenv": "node -e \"require('semver').satisfies(process.version, '<13') && console.log('NODE_ICU_DATA=' + require('full-icu').datPath())\" > .env",
@@ -45,10 +45,10 @@
     "semantic-release": "semantic-release",
     "start": "webpack --watch",
     "test": "run-p test:lint test:jest",
-    "test:jest": "dotenv jest --coverage",
+    "test:jest": "dotenv -- jest --coverage=true",
     "test:lint": "eslint --cache --fix .",
-    "test:coveralls": "dotenv jest --coverage --coverageReporters=text-lcov | coveralls",
-    "test:watch": "dotenv jest --coverage --watch"
+    "test:coveralls": "dotenv -- jest --coverage --coverageReporters=text-lcov | coveralls",
+    "test:watch": "dotenv -- jest --coverage --watch"
   },
   "engines": {
     "node": ">=12"
