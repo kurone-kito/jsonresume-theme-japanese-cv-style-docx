@@ -1,12 +1,5 @@
-/coverage/**
-/docs/**
-/page/**
-/node_modules/**
+/*.config.?s
+/coverage
+/docs
 /index.js
 *.d.ts
-*.docx
-*.json
-*.md
-*.tgz
-*.yml
-LICENSE
