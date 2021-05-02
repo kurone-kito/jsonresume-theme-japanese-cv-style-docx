@@ -1,7 +1,6 @@
 import ESLintPlugin from 'eslint-webpack-plugin';
 import path from 'path';
-import 'ts-polyfill/lib/es2019-object';
-import webpack from 'webpack';
+import type webpack from 'webpack';
 import { dependencies, name } from './package.json';
 import { compilerOptions } from './tsconfig.json';
 
