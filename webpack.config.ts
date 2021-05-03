@@ -19,7 +19,7 @@ const createAliases = () => {
 
 export default <webpack.Configuration>{
   cache: true,
-  devtool: false,
+  devtool: 'source-map',
   externals: Object.keys(dependencies || {}),
   mode: 'production',
   module: { rules: [{ test: /\.ts$/, use: 'ts-loader' }] },
