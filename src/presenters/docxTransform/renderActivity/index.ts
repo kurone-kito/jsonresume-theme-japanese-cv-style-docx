@@ -1,5 +1,4 @@
 import { Paragraph, HeadingLevel } from 'docx';
-import 'ts-polyfill/lib/es2019-array';
 import type { Activity } from '~/entities/createActivity';
 import item from './item';
 

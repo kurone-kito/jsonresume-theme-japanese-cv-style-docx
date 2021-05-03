@@ -1,5 +1,4 @@
 import { Paragraph, HeadingLevel, Table } from 'docx';
-import 'ts-polyfill/lib/es2019-array';
 import type { EnhancedProject } from '~/entities/enhanced';
 import item from './item';
 

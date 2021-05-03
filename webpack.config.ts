@@ -1,7 +1,6 @@
 import ESLintPlugin from 'eslint-webpack-plugin';
 import path from 'path';
-import 'ts-polyfill/lib/es2019-object';
-import webpack from 'webpack';
+import type webpack from 'webpack';
 import { dependencies, name } from './package.json';
 import { compilerOptions } from './tsconfig.json';
 
@@ -20,22 +19,22 @@ const createAliases = () => {
 
 export default <webpack.Configuration>{
   cache: true,
-  devtool: false,
+  devtool: 'source-map',
   externals: Object.keys(dependencies || {}),
   mode: 'production',
   module: { rules: [{ test: /\.ts$/, use: 'ts-loader' }] },
   output: {
     filename: 'index.js',
-    path: __dirname,
+    path: `${__dirname}/dist`,
     library: name,
     libraryTarget: 'umd',
   },
   plugins: [
     new DtsBundleWebpack({
       indent: '  ',
-      main: 'src/index.d.ts',
+      main: `${__dirname}/dist/src/index.d.ts`,
       name,
-      out: '../index.d.ts',
+      out: `${__dirname}/dist/index.d.ts`,
     }),
     new ESLintPlugin({}),
   ],

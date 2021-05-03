@@ -34,7 +34,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build:doc": "typedoc --exclude '**/*.spec.ts' --out ./docs/ ./src/",
     "build:resume": "dotenv -- node sample/build.js",
@@ -60,14 +60,18 @@
     "lodash.groupby": "^4.6.0",
     "lodash.sortby": "^4.7.0",
     "reflect-metadata": "^0.1.13",
-    "resume-schema": "^1.0.0",
-    "ts-polyfill": "^3.8.2"
+    "resume-schema": "^1.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^12.1.1",
     "@commitlint/config-conventional": "^12.1.1",
-    "@jedmao/semantic-release-npm-github-config": "^1.0.9",
     "@octokit/core": "^3.4.0",
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/commit-analyzer": "^8.0.1",
+    "@semantic-release/git": "^9.0.0",
+    "@semantic-release/github": "^7.2.1",
+    "@semantic-release/npm": "^7.1.1",
+    "@semantic-release/release-notes-generator": "^9.0.2",
     "@types/jest": "^26.0.23",
     "@types/json5": "^2.2.0",
     "@types/lodash.chunk": "^4.2.6",
@@ -94,19 +98,19 @@
     "jest": "^26.6.3",
     "json5": "^2.2.0",
     "lodash.chunk": "^4.2.0",
-    "marked": "^0.7.0",
+    "marked": "^2.0.3",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.2.1",
-    "semantic-release": "^15.14.0",
+    "semantic-release": "^17.4.2",
     "semver": "^7.3.5",
     "showdown": "^1.9.1",
     "ts-jest": "^26.5.5",
-    "ts-loader": "^8.2.0",
+    "ts-loader": "^9.1.1",
     "ts-node": "^9.1.1",
     "tsconfig-paths-jest": "0.0.1",
     "typedoc": "^0.20.36",
     "typescript": "^4.2.4",
-    "webpack": "^5.35.1",
+    "webpack": "^5.36.2",
     "webpack-cli": "^4.6.0",
     "xml": "^1.0.1"
   }

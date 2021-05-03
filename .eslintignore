@@ -1,5 +1,6 @@
 /*.config.?s
 /coverage
+/dist
 /docs
 /index.js
 *.d.ts

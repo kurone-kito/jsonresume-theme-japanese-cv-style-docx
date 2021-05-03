@@ -1,7 +1,6 @@
 import JSON5 from 'json5';
 import chunk from 'lodash.chunk';
 import type { ResumeSchema } from '@kurone-kito/jsonresume-types';
-import 'ts-polyfill/lib/es2019-array';
 import type { Publication, Volunteer } from '~/entities';
 import createActivity, { Activity } from './createActivity';
 

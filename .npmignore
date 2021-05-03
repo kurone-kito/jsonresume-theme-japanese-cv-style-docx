@@ -1,7 +1,9 @@
-.*
 *.docx
 *.tgz
+*config.*s*
+.*
+/coverage
+/docs
 build.js
 resume.json
-*config.*s*
-src/
+src
