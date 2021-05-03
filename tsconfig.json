@@ -9,6 +9,7 @@
     "lib": ["DOM", "ES2019"],
     "module": "commonjs",
     "moduleResolution": "node",
+    "outDir": "dist",
     "paths": {
       "~*": ["src*"]
     },
@@ -18,6 +19,6 @@
     "strict": true,
     "target": "ES2019"
   },
-  "exclude": ["node_modules", "index.js"],
-  "include": ["sample/**/*", "src/**/*"]
+  "exclude": ["dist", "node_modules", "index.js"],
+  "include": ["sample/**/*", "src/**/*", "*.config.?s"]
 }

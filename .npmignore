@@ -4,6 +4,6 @@
 .*
 /coverage
 /docs
-/src
 build.js
 resume.json
+src

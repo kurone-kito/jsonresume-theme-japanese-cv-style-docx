@@ -25,16 +25,16 @@ export default <webpack.Configuration>{
   module: { rules: [{ test: /\.ts$/, use: 'ts-loader' }] },
   output: {
     filename: 'index.js',
-    path: __dirname,
+    path: `${__dirname}/dist`,
     library: name,
     libraryTarget: 'umd',
   },
   plugins: [
     new DtsBundleWebpack({
       indent: '  ',
-      main: 'src/index.d.ts',
+      main: `${__dirname}/dist/src/index.d.ts`,
       name,
-      out: '../index.d.ts',
+      out: `${__dirname}/dist/index.d.ts`,
     }),
     new ESLintPlugin({}),
   ],

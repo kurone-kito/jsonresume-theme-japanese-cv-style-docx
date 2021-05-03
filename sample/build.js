@@ -2,7 +2,7 @@
 const fs = require('fs');
 const path = require('path');
 // eslint-disable-next-line import/no-unresolved
-const { render } = require('..');
+const { render } = require('../dist');
 const resume = require('./resume.json');
 
 const filename = path.resolve(__dirname, 'resume.docx');

@@ -34,7 +34,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build:doc": "typedoc --exclude '**/*.spec.ts' --out ./docs/ ./src/",
     "build:resume": "dotenv -- node sample/build.js",
