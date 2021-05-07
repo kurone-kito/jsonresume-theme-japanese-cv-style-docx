@@ -2,8 +2,6 @@
   "name": "@kurone-kito/jsonresume-theme-japanese-cv-style-docx",
   "version": "2.0.0",
   "description": "Generate a Word docx file of Japanese-style resume (職務経歴書) from JSON Resume",
-  "author": "kurone-kito",
-  "license": "MIT",
   "keywords": [
     "Curriculum Vitae",
     "CV",
@@ -23,18 +21,14 @@
     "日本語",
     "履歴書"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kurone-kito/jsonresume-theme-japanese-cv-style-docx.git"
-  },
+  "homepage": "https://github.com/kurone-kito/jsonresume-theme-japanese-cv-style-docx#readme",
   "bugs": {
     "url": "https://github.com/kurone-kito/jsonresume-theme-japanese-cv-style-docx/issues"
   },
-  "homepage": "https://github.com/kurone-kito/jsonresume-theme-japanese-cv-style-docx#readme",
-  "publishConfig": {
-    "access": "public"
-  },
+  "license": "MIT",
+  "author": "kurone-kito <krone@kit.black> (https://kit.black/)",
   "main": "dist/index.js",
+  "repository": "github:kurone-kito/jsonresume-theme-japanese-cv-style-docx",
   "scripts": {
     "build:doc": "typedoc --exclude '**/*.spec.ts' --out ./docs/ ./src/",
     "build:resume": "dotenv -- node sample/build.js",
@@ -49,9 +43,6 @@
     "test:lint": "eslint --cache --fix .",
     "test:coveralls": "dotenv -- jest --coverage --coverageReporters=text-lcov | coveralls",
     "test:watch": "dotenv -- jest --coverage --watch"
-  },
-  "engines": {
-    "node": ">=12"
   },
   "dependencies": {
     "@kurone-kito/jsonresume-types": "^0.2.2",
@@ -113,5 +104,11 @@
     "webpack": "^5.36.2",
     "webpack-cli": "^4.6.0",
     "xml": "^1.0.1"
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
