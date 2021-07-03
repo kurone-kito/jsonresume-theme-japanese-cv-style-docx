@@ -1,5 +1,6 @@
 plugins:
   - '@semantic-release/commit-analyzer'
+  - semantic-release-commitlint
   - '@semantic-release/release-notes-generator'
   - - '@semantic-release/changelog'
     - changelogTitle: |-
@@ -13,6 +14,6 @@ plugins:
     - assets: pack/*.tgz
   - - '@semantic-release/git'
     - message: |-
-        chore(release): ${nextRelease.version} [skip ci]
+        chore: ${nextRelease.version} [skip ci]
 
         ${nextRelease.notes}
