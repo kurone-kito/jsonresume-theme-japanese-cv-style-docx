@@ -332,5 +332,8 @@ $RECYCLE.BIN/
 # Husky
 .husky/_
 
+# TypeDoc
+/docs
+
 # Ignorefiles
 .*ignore
